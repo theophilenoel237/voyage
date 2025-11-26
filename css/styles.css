@@ -44,6 +44,12 @@ header
     color: black;
     font-weight: bold;
 }
+.title ul li a:hover
+{
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+}
 main
 {
     height: 88%;
@@ -59,7 +65,10 @@ main
     justify-content: center;
     align-items: center;
     transition-duration: 1s;
-
+}
+#section1:hover
+{
+     animation: animetoi 10s ease-in infinite;
 }
 #section1 h1
 {
@@ -83,11 +92,13 @@ main
     text-decoration: none;
     border-radius: 5px;
     transition-duration: 1s;
+    animation: animenoi 0.9s linear infinite;
 }
 #section1 a:hover
 {
     background-color: aqua;
     color:black ;
+    transform: scale(2);
     transition-duration: 0.6s;
 }
 
@@ -190,14 +201,25 @@ h2
     text-decoration: none;
     color: white;
     background-color: orange;
-    height: 20px;
-    width: 10%;
     font-size: bold;
     padding-inline: 40px;
     padding-block: 5px;
     border-radius: 4px;
 }
+#section3 a:hover
+{
+    color: orange;
+    border: 2px solid orange;
+    background-color: whitesmoke; 
+    transform: skew(20deg);
+    transition-duration: 2s;
+}
 
+.info:hover
+{
+    transform: skew(25deg);
+
+}
 
 #section4
 {
@@ -248,11 +270,21 @@ label
 }
 #section4 .ok
 {
+    animation: animeme 1s linear infinite;
     height: 24%;
     width: 4%;
     color: white;
     background-color: rgb(7, 181, 218);
     border: 1px solid rgb(7, 181, 218);;
+}
+#section4 .ok:hover
+{
+    height: 24%;
+    width: 4%;
+    color: white;
+    background-color: rgb(7, 218, 70);
+    border: 1px solid rgb(7, 181, 218);
+    transform: scale(2);
 }
 footer
 {
@@ -277,4 +309,29 @@ footer h1 span
 footer p
 {
     color: gray;
+}
+@keyframes animemoi
+{
+    from{transform: rotate(0deg);}    
+    to{transform: rotate(180deg);}  
+}
+@keyframes animetoi
+{
+    0%{background: url(../image/main.jpg); background-repeat: no-repeat; background-size: auto;}    
+    50%{background: url(../image/article-image-1.jpg); background-repeat: no-repeat; background-size: auto;}
+    100%{background: url(../image/article-image-2.jpg); background-repeat: no-repeat; background-size: auto;}
+}
+@keyframes animenoi
+{
+    25%{transform: scale(1);}
+    50%{transform: scale(2);}
+    75%{transform: scale(1);}
+    100%{transform: scale(1);}
+}
+@keyframes animeme
+{
+    0%{transform: translateY(20px);}    
+    50%{transform: translateY(0px);} 
+    100%{transform: translateY(20px);}    
+  
 }
